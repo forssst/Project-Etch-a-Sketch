@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.plane {
+    display: flex;
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+
+.box {
+  padding: 15px;
+  border: 1px solid black;  
+}
