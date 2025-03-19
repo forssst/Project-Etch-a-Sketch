@@ -2,36 +2,82 @@ const plane = document.querySelector(".plane");
 const gridNum = document.querySelector(".gridNum");
 const inputVal = document.querySelector(".input");
 const btn = document.querySelector(".btn");
-const text = document.querySelector(".text");
+const clearGridBut = document.querySelector(".clearGridBut")
+const box = document.querySelectorAll(".box");
+inputVal.value = 16;
 
 
-btn.addEventListener("click", (e) => {
+function createGrid() {
+  if (inputVal.value > 100) {
+    alert("No more than 100 please")
+  } else {
+  let MulGridVal = inputVal.value * inputVal.value;
+  for (i = 1; i <= MulGridVal; i++) {
+    plane.innerHTML += `<div class="box"></div>`;
+  }
+
+  // DIVISING BOXES INTO MATCHING SQUARES
+  const box = document.querySelectorAll(".box");
+  box.forEach(boxs => {
+    boxs.style.width = `calc(100% / ${inputVal.value})`;
+    // boxs.style.height = `calc(100% / ${inputVal.value})`;
+    /// HOVER
+    boxs.addEventListener("mouseover", (e) => {
+      console.log(':d')
+      e.target.classList.add("hovered")
+    })
+  })
+}
+}
+
+
+
+function changeGrid() {
+  btn.addEventListener("click", () => {
     console.log(inputVal.value);
-    if(inputVal.value > 100 ){
-        alert("No more than 100 please")
-    } else {
-    text.innerHTML = inputVal.value;
-    plane.innerHTML = `` 
-    let x = inputVal.value * inputVal.value;
-    console.log(x)
-    // box.style.width = `calc(960 / ${inputVal.value})`;
-    for(i = 1; i <= x; i++){
-        plane.innerHTML += `<div class="box"></div>`;
-       
-        
-    }
+    plane.innerHTML = ``
+    createGrid();
+  })
+}
 
-    const box =document.querySelectorAll(".box");
+function clearGrid(){
+  clearGridBut.addEventListener("click", () => {
+    console.log('chuj')
+    const box = document.querySelectorAll(".box");
     box.forEach(boxs => {
-        boxs.style.width = `calc(100% / ${inputVal.value})`;
-         boxs.style.height = `calc(100% / ${inputVal.value})`;
-        })
-   
-}})
+      boxs.classList.remove("hovered")
+    })
+  })
+}
 
-  
 
-    
+
+
+function main() {
+  createGrid();
+  changeGrid();
+  clearGrid();
+}
+
+main();
+
+
+
+
+
+
+
+/// GRID CREATION
+
+
+
+
+
+
+
+
+
+
 
 
 // to ma 16x16 jak valu 16 jest 

@@ -29,8 +29,8 @@ body{
     display: flex;
     flex-wrap: wrap;
     border: 3px solid green;
-    width: 960px;
-    height: 960px;
+    width: 700px;
+    height: 700px;
 
 }
 
@@ -39,7 +39,12 @@ body{
     background-color: #fff;
 }
 
-.box:hover{
-    background-color: red;
+
+.hovered {
+    background-color: black;
+}
+
+.cleargridBut {
+    
 }
 
