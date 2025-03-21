@@ -161,7 +161,10 @@ function clearGrid() {
 function visableGrid() {
   const box = document.querySelectorAll(".box");
   box.forEach(boxs => {
-      grid == true ? boxs.style.border = '1px solid rgba(255, 255, 255, 0);'   : boxs.style.border = 'none'
+      grid == true ? boxs.style.border = '1px solid rgba(0, 0, 0, 1)'  : boxs.style.border = '0px solid rgba(255, 255, 255, 0)';
+      // if (grid == true) {
+      //   boxs.style.border = '1px solid rgba(255, 255, 255, 0)';
+      // }
 
 
     // if (grid == false) {
