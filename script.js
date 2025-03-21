@@ -7,6 +7,7 @@ const rainbowModeBut = document.querySelector(".rainbowModeBut")
 const hovered = document.querySelector('.hovered');
 const shadingModeBut = document.querySelector(".shadingModeBut")
 const eraserBut = document.querySelector(".eraserBut")
+const gridBut = document.querySelector(".gridBut")
 inputVal.value = 16;
 let rainbowMode = false;
 let shadingMode = false;
@@ -52,6 +53,8 @@ function createGrid() {
             }
           }
 
+         
+
 
 
       })
@@ -78,6 +81,11 @@ eraserBut.addEventListener('click', () => {
   turnEraser()
   shadingMode == true ? turnShadingMode() : null;
   rainbowMode == true ? turnRainbowMode() : null;
+})
+
+gridBut.addEventListener('click', () => {
+  turnGrid()
+  
 })
 
 
@@ -124,6 +132,9 @@ function turnGrid() {
     grid = false
     gridBut.style.background = 'rgba(248, 88, 88, 0.99)'
   }
+
+  visableGrid()
+  console.log(`gird ${grid}`)
 }
 
 
@@ -147,6 +158,22 @@ function clearGrid() {
   })
 }
 
+function visableGrid() {
+  const box = document.querySelectorAll(".box");
+  box.forEach(boxs => {
+      grid == true ? boxs.style.border = '1px solid rgba(255, 255, 255, 0);'   : boxs.style.border = 'none'
+
+
+    // if (grid == false) {
+    //   boxs.style.border = 'none'
+    // } else if (grid == true) {
+    //   boxs.style.border = '1px solid rgba(255, 255, 255, 0);'
+    //   console.log(boxs.style.border)
+    // }
+  })
+
+}
+
 
 
 function randomRgbColor() {
@@ -162,6 +189,7 @@ function main() {
   createGrid();
   changeGrid();
   clearGrid();
+
 }
 
 main();
