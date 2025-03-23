@@ -1,7 +1,7 @@
 const plane = document.querySelector(".plane");
 const gridNum = document.querySelector(".gridNum");
 const inputVal = document.querySelector(".input");
-const btn = document.querySelector(".btn");
+const inputBut = document.querySelector(".inputBut");
 const clearGridBut = document.querySelector(".clearGridBut")
 const rainbowModeBut = document.querySelector(".rainbowModeBut")
 const hovered = document.querySelector('.hovered');
@@ -145,7 +145,7 @@ clearGridBut.addEventListener("click", () => {
 })
 
 function changeGrid() {
-  btn.addEventListener("click", () => {
+  inputBut.addEventListener("click", () => {
     plane.innerHTML = ``
     createGrid();
   })
