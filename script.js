@@ -24,11 +24,10 @@ function createGrid() {
         plane.innerHTML += `<div class="box"></div>`;
       }
 
-    // DIVISING BOXES INTO MATCHING SQUARES
     const box = document.querySelectorAll(".box");
         box.forEach(boxs => {
           boxs.style.width = `calc(100% / ${inputVal.value})`;
-      /// HOVER
+
           boxs.addEventListener("mouseover", (e) => {
             if (rainbowMode == false && shadingMode == false && eraser == false) {
               e.target.style.background = 'rgba(0, 0, 0, 0.99)'
@@ -52,11 +51,6 @@ function createGrid() {
               e.target.style.background = `rgba(0, 0, 0, ${rgbaAlpha + 0.09})`
             }
           }
-
-         
-
-
-
       })
     })
   }
@@ -95,9 +89,11 @@ function turnRainbowMode() {
   if (rainbowMode == false) {
     rainbowMode = true;
     rainbowModeBut.style.background = 'rgba(95, 236, 39, 0.99)'
+    rainbowModeBut.innerHTML = 'Turn off rainbow mode'
   } else if (rainbowMode == true) {
     rainbowMode = false
     rainbowModeBut.style.background = 'rgba(248, 88, 88, 0.99)'
+    rainbowModeBut.innerHTML = 'Turn on rainbow mode'
   }
 }
 
@@ -106,9 +102,13 @@ function turnShadingMode() {
   if (shadingMode == false) {
     shadingMode = true;
     shadingModeBut.style.background = 'rgba(95, 236, 39, 0.99)'
+    shadingModeBut.innerHTML = "Turn off shading mode"
   } else if (shadingMode == true) {
     shadingMode = false;
     shadingModeBut.style.background = 'rgba(248, 88, 88, 0.99)'
+    shadingModeBut.innerHTML = "Turn on shading mode"
+
+
   }
 }
 
@@ -117,9 +117,11 @@ function turnEraser() {
   if (eraser == false) {
     eraser = true;
     eraserBut.style.background = 'rgba(95, 236, 39, 0.99)'
+    eraserBut.innerHTML = 'Turn off eraser'
   } else if (eraser == true) {
     eraser = false;
     eraserBut.style.background = 'rgba(248, 88, 88, 0.99)'
+    eraserBut.innerHTML = 'Turn on eraser'
   }
 }
 
@@ -128,9 +130,11 @@ function turnGrid() {
   if (grid == false) {
     grid = true;
     gridBut.style.background = 'rgba(95, 236, 39, 0.99)'
+    gridBut.innerHTML = 'Turn off grid'
   } else if (grid == true) {
     grid = false
     gridBut.style.background = 'rgba(248, 88, 88, 0.99)'
+    gridBut.innerHTML = 'Turn on grid'
   }
 
   visableGrid()
@@ -162,17 +166,6 @@ function visableGrid() {
   const box = document.querySelectorAll(".box");
   box.forEach(boxs => {
       grid == true ? boxs.style.border = '1px solid rgba(0, 0, 0, 1)'  : boxs.style.border = '0px solid rgba(255, 255, 255, 0)';
-      // if (grid == true) {
-      //   boxs.style.border = '1px solid rgba(255, 255, 255, 0)';
-      // }
-
-
-    // if (grid == false) {
-    //   boxs.style.border = 'none'
-    // } else if (grid == true) {
-    //   boxs.style.border = '1px solid rgba(255, 255, 255, 0);'
-    //   console.log(boxs.style.border)
-    // }
   })
 
 }
@@ -197,12 +190,7 @@ function main() {
 
 main();
 
-////////////////////// CO ZOSTAŁO
-// /// co zostało
-// wygląd trzeba ogarnąc
-// cieniowaine v/
-// gumke
-// i ogarac czemu takie lagi sa przy zmianie bo u innych nie ma a tak to geet 
+
 
 
 

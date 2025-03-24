@@ -60,14 +60,18 @@ body{
     background-color: black;
 }
 
+.gridBut {
+    background-color: rgba(95, 236, 39, 0.99);
+    padding: 15px;
+    border: 3px solid rgb(185, 175, 175);
+}
 
 
-.clearGridBut,.rainbowModeBut,.shadingModeBut,.eraserBut,.gridBut {
+
+.clearGridBut,.rainbowModeBut,.shadingModeBut,.eraserBut {
  padding: 15px;
  background-color: rgba(248, 88, 88, 0.99);
  border: 3px solid rgb(185, 175, 175);
- -webkit-box-shadow: 42px 44px 15px -29px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 42px 44px 15px -29px rgba(66, 68, 90, 1);
-    box-shadow: 42px 44px 15px -29px rgba(66, 68, 90, 1);
+ box-shadow: 42px 44px 15px -29px rgba(66, 68, 90, 1);
 }
 
