@@ -1,5 +1,5 @@
 const plane = document.querySelector(".plane");
-const gridNum = document.querySelector(".gridNum");
+const gridNum = document.querySelector(".gridInput");
 const inputVal = document.querySelector(".input");
 const inputBut = document.querySelector(".inputBut");
 const clearGridBut = document.querySelector(".clearGridBut")
@@ -40,7 +40,9 @@ function createGrid() {
               let g = parseFloat(getRgbaString.split(',')[1])
               let b = parseFloat(getRgbaString.split(',')[2])
 
-            if (rgbaAlpha > 0) {
+             if( r == 255 && g == 255 && b == 255) {
+              
+             } else if (rgbaAlpha > 0) {
               e.target.style.background = `rgba(${r} , ${g}, ${b}, ${rgbaAlpha - 0.1})`
             }
           } else if (rainbowMode == false && shadingMode == true && eraser == false) {
@@ -51,6 +53,7 @@ function createGrid() {
               e.target.style.background = `rgba(0, 0, 0, ${rgbaAlpha + 0.09})`
             }
           }
+
       })
     })
   }
@@ -92,7 +95,7 @@ function turnRainbowMode() {
     rainbowModeBut.innerHTML = 'Turn off rainbow mode'
   } else if (rainbowMode == true) {
     rainbowMode = false
-    rainbowModeBut.style.background = 'rgba(248, 88, 88, 0.99)'
+    rainbowModeBut.style.background = 'rgba(223, 41, 53, 0.99)'
     rainbowModeBut.innerHTML = 'Turn on rainbow mode'
   }
 }
@@ -105,7 +108,7 @@ function turnShadingMode() {
     shadingModeBut.innerHTML = "Turn off shading mode"
   } else if (shadingMode == true) {
     shadingMode = false;
-    shadingModeBut.style.background = 'rgba(248, 88, 88, 0.99)'
+    shadingModeBut.style.background = 'rgba(223, 41, 53, 0.99)'
     shadingModeBut.innerHTML = "Turn on shading mode"
 
 
@@ -120,7 +123,7 @@ function turnEraser() {
     eraserBut.innerHTML = 'Turn off eraser'
   } else if (eraser == true) {
     eraser = false;
-    eraserBut.style.background = 'rgba(248, 88, 88, 0.99)'
+    eraserBut.style.background = 'rgba(223, 41, 53, 0.99)'
     eraserBut.innerHTML = 'Turn on eraser'
   }
 }
@@ -133,7 +136,7 @@ function turnGrid() {
     gridBut.innerHTML = 'Turn off grid'
   } else if (grid == true) {
     grid = false
-    gridBut.style.background = 'rgba(248, 88, 88, 0.99)'
+    gridBut.style.background = 'rgba(223, 41, 53, 0.99)'
     gridBut.innerHTML = 'Turn on grid'
   }
 

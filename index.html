@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Etch-a-sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bytesized&family=Chewy&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script defer src="script.js"></script>
 </head>
@@ -11,23 +14,28 @@
     <div class="header">
         <h1>Etch-a-sketch</h1>
     </div>
-    <div class="gridNum">
-        <input type="number" class="input"  placeholder="Enter grid size" >
-        <button class="inputBut">Create Grid</button>
-    </div>
-    <div class="grid">
-        <div class="buttons">
-            <button class="clearGridBut">Clear Grid</button>
-            <button class="rainbowModeBut">Turn on rainbow mode</button>
-            <button class="shadingModeBut">Turn on shading mode</button>
-            <button class="eraserBut">Turn on eraser</button>
-            <button class="gridBut">Turn of grid</button>
+    <div class="container">
+        <div class="leftSide">
+            <div class="gridInput">
+                <input type="number" class="input"  placeholder="Enter grid size" >
+                <button class="inputBut">Create Grid</button>
+            </div>
+           
+            <div class="buttons">
+                <button class="clearGridBut">Clear Grid</button>
+                <button class="rainbowModeBut">Turn on rainbow mode</button>
+                <button class="shadingModeBut">Turn on shading mode</button>
+                <button class="eraserBut">Turn on eraser</button>
+                <button class="gridBut">Turn off grid</button>
+            </div>
         </div>
-        <div class="plane">
-    </div>
         
+        <div class="grid">
+            <div class="plane">
+            </div>
+        </div>
     </div>
     
-    </div>
+    
 </body>
 </html> 
