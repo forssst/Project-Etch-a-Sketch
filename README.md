@@ -1,7 +1,7 @@
 # Project-Etch-a-Sketch
 A simple and interactive Etch-a-Sketch app built with HTML, CSS, and JavaScript.
 
-Features
+## Features
 ✏️ Custom Grid Size – Choose the size of the drawing grid.
 
 🌈 Rainbow Mode – Draw with randomly changing colors.
